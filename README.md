@@ -11,7 +11,7 @@ The [Build a Random Quote Machine](https://feldbot.github.io/fcc-quote-machine/)
 
 ## Installing
 
-Download or clone the repository and open the index.html file to view locally. All dependencies are linked to from the index file.
+Download or clone the repository and open the `index.html` file to view locally. All dependencies are linked to from `index.html`.
 
 ## Author
 
