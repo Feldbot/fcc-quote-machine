@@ -20,4 +20,4 @@ Download or clone the repository and open the `index.html` file to view locally.
 
 ## Acknowledgments
 
-* [Quotes on Design](http://quotesondesign.com/api-v4-0/) for access to the wonderful design quotes database
+* [Quotes on Design](http://quotesondesign.com/api/) for access to the wonderful design quotes database

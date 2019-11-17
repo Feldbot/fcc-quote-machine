@@ -5,20 +5,20 @@ $("#quoteButton").on("click", function() {
 // Quotes on Design API call
 function loadQuote() {
   var qodURL =
-    "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback";
+    "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand";
 
   $.ajax({
     url: qodURL,
-    dataType: "jsonp",
-    jsonpCallback: "mycallback",
+    dataType: "json",
     success: function(data) {
       var twttrURL, twttrIntentQuote, twttrIntentAuthor;
 
       // Data is an array of posts. Grab the first one.
       var post = data.shift();
 
-      $("#quote-title").text("—" + post.title);
-      $("#quote-content").html(post.content);
+      // Added rendered prop per API change
+      $("#quote-title").text("—" + post.title.rendered);
+      $("#quote-content").html(post.content.rendered);
 
       // Append parameters to URL
       twttrURL = "https://twitter.com/intent/tweet?related=freecodecamp&text=";
